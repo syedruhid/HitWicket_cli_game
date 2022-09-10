@@ -18,19 +18,18 @@ public class layout {
 			}
 		}
         //player A piece ap(n)
-		board[0][0] = new ap1(false);
-		board[1][0] = new ap2(false);
-		board[2][0] = new ap3(false);
-		board[3][0] = new ap4(false);
-		board[4][0] = new ap5(false);
-	
+		layout[0][0] = new piece(false);
+		layout[1][0] = new piece(false);
+		layout[2][0] = new piece(false);
+		layout[3][0] = new piece(false);
+		layout[4][0] = new piece(false);
 		
 		//player B piece bp(n)
-		board[0][4] = new bp1(true);
-		board[1][4] = new bp2(true);
-		board[2][4] = new bp3(true);
-		board[3][4] = new bp4(true);
-		board[4][4] = new bp5(true);
+		layout[0][4] = new piece(true);
+		layout[1][4] = new piece(true);
+		layout[2][4] = new piece(true);
+		layout[3][4] = new piece(true);
+		layout[4][4] = new piece(true);
 		
 		
 	}
@@ -45,8 +44,6 @@ public class layout {
 			return true;
 		} else if (pieceName.equalsIgnoreCase("wn") || pieceName.equalsIgnoreCase("bn")) {
 			return true;
-		//} else if (pieceName.equalsIgnoreCase("wp") || pieceName.equalsIgnoreCase("bp")) {
-		//	return true;
 		}
 		
 		int X;
@@ -92,16 +89,11 @@ public class layout {
 		
 		
 		if (X == 0) {
-		/*	System.out.println(deltaX + " "+ deltaY + " " + dx + " " + dy+ " " + tempx + " " + tempy);
-			System.out.println(oldX + " " + oldY );
-			System.out.println(newX + " " + newY ); */
+		
 			tempy = tempy + dy;
-			//System.out.println("newx:"+newX+" newy:"+newY);
 			for (int i = 0; i < Math.abs(Y)-1; i++) {
-				//System.out.println("tempx:"+tempx+ " tempy:"+tempy);
 				if (layout[tempx][tempy] != null) {
 					go = false;
-					break;
 				}
 				
 				tempy = tempy + dy;
@@ -113,10 +105,7 @@ public class layout {
 		if (X != 0 && Y != 0) {
 			tempx = tempx + dx;
 			tempy = tempy + dy;
-			//System.out.println("newx:"+newX+" newy:"+newY);
 			for (int i = 0; i < Math.abs(Y)-1; i++) {
-			//while ((tempx != newX && tempy != newY)) { 
-				//System.out.println("tempx:"+tempx+ " tempy:"+tempy);
 				if (layout[tempx][tempy] != null) {
 					go = false;
 					break;
