@@ -6,3 +6,4 @@ Step 1 : Initially created a layout.java file for the platfrom to play with 5x5 
 
 Step 2: Create seperate abstract classes to inherit common characters for all the pieces. Every class will implement multilevel inheritance from this abstract class             defined.
 
+Step 3: Two differnt .java files to implement classes ap and bp -- pieces of two differnt players and their property.
