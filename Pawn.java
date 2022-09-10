@@ -1,5 +1,4 @@
-public class Pawn extends Piece {
-	private boolean castlingDone = false;
+public class Pawn extends Piece 
 
 	public Pawn(boolean white)
 	{
